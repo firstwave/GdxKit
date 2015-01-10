@@ -1,1 +1,6 @@
-include 'desktop', 'android', 'ios', 'core'
+include ':GdxKit:desktop', ':GdxKit:android', ':GdxKit:ios', ':GdxKit:core'
+
+project(':GdxKit:core').projectDir = new File(rootDir, 'core')
+project(':GdxKit:android').projectDir = new File(rootDir, 'android')
+project(':GdxKit:ios').projectDir = new File(rootDir, 'ios')
+project(':GdxKit:desktop').projectDir = new File(rootDir, 'desktop')

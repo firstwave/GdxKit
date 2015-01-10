@@ -1,3 +1,16 @@
+apply plugin: "java"
+apply plugin: "robovm"
+
+configurations { natives }
+
+dependencies {
+    compile project(":GdxKit:core")
+    compile "org.robovm:robovm-rt:${roboVMVersion}"
+    compile "org.robovm:robovm-cocoatouch:${roboVMVersion}"
+    compile "com.badlogicgames.gdx:gdx-backend-robovm:$gdxVersion"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-ios"
+}
+
 sourceSets.main.java.srcDirs = [ "src/" ]
 
 sourceCompatibility = '1.7'
@@ -57,9 +70,3 @@ launchIPhoneSimulator.dependsOn build
 launchIPadSimulator.dependsOn build
 launchIOSDevice.dependsOn build
 createIPA.dependsOn build
-
-
-eclipse.project {
-    name = appName + "-ios"
-    natures 'org.robovm.eclipse.RoboVMNature'
-}
