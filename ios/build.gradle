@@ -64,7 +64,6 @@ task updateRoboVMXML << {
 
 updateRoboVMXML.dependsOn copyNatives
 build.dependsOn updateRoboVMXML
-tasks.eclipse.dependsOn updateRoboVMXML
 
 launchIPhoneSimulator.dependsOn build
 launchIPadSimulator.dependsOn build
