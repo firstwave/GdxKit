@@ -7,6 +7,6 @@ import io.firstwave.gdxkit.GdxKitGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new GdxKitGame(), config);
+		new LwjglApplication(new GdxKitGame(new DesktopDelegate()), config);
 	}
 }
