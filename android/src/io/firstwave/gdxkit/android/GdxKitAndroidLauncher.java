@@ -6,7 +6,7 @@ import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import io.firstwave.gdxkit.GdxKitGame;
 
-public class AndroidLauncher extends AndroidApplication {
+public class GdxKitAndroidLauncher extends AndroidApplication {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
